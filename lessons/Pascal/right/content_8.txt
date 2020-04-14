@@ -1,0 +1,82 @@
+<Table width = "100%" id = "main-background"> 
+      <td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2_2.html"> Урок 2 </a> > <a href = "pascal_lesson_3_3.html"> Урок 3  </a> > <a href = "pascal_lesson_4_4.html"> Урок 4  </a> > <a href = "pascal_lesson_5_5.html"> Урок 5  </a> > <a href = "pascal_lesson_6_6.html"> Урок 6  </a> > <a href = "pascal_lesson_7_7.html"> Урок 7  > <a href = "pascal_lesson_8_8.html"> Урок 8 (Вы здесь) </a> > <a href = "pascal_lesson_9_9.html"> Урок 9 </a> </td>
+        <TR height = "20" width = "100%" align = "center" >
+          <TD>
+            <h1> Работа с массивами </h1>
+            
+          </td> 
+         <td> <img src = "img/l8.png" width = "150" height = "130"> </a> </td>  
+          
+        </TR>
+        <TR height = "30%">
+          <TD>
+<p>  Для работы с массивами очень хорошо подходит цикл for,
+с его помощью можно последовательно перебрать элементы массива и обрабатывать их.</p>
+                <h3> Описание массива и его заполнение: </h3>
+<textarea id = "code-frame" readonly style = "height:165px">
+const N=10;
+var a:array[1..N] of integer;
+    i:integer;
+BEGIN
+ for i:=1 to N do
+ begin
+  a[i]:=Random(10);
+ end;
+END. </textarea>
+
+      <p> Также вместо функции Random() можно использовать Readln() для считывания элементов с клавиатуры. </p>
+      <p> С помощью данной конструкции можно вывести все элементы массива в строку: </p>
+
+  <textarea id = "code-frame" readonly style = "height:100px">
+ for i:=1 to N do
+ begin
+  write(a[i], ' ');
+ end;
+  </textarea>
+
+      <h3> Обработка массивов </h3>
+
+      <p> Для нахождения наибольшего элемента массива нам также понадобится конструкция if. </p>
+
+    <textarea id = "code-frame" readonly style = "height:260px">
+ const N=10;
+ var a:array[1..N] of integer;
+     i,m:integer;
+ BEGIN
+  for i:=1 to N do
+  begin
+   a[i]:=Random(10);
+  end;
+  m:=a[1]; Присваиваем нашей переменной значение первого элемента массива
+  for i:=2 to N do //Перебор начинаем со второго элемента,
+  begin         так как первый мы уже занесли в переменную m и сравнивать его с самим собой бессмысленно
+   if a[i]>m then m:=a[i]; //Запоминаем значение элемента массива, который больше нашей переменной
+  end;
+ END.
+    </textarea>
+    
+<p> По окончании цикла в переменной m будет содержаться наибольшее значение в массиве </p>
+<h2> Помогите Бобу </h2>
+<p> Боб захотел посчитать количество цифр '5' во введенном с клавиатуры массиве, но его, как всегда, ждет неудача, что же он на этот раз сделал не так? </p>
+<textarea id = "code-frame" readonly style = "height:260px">
+ const N=5;
+ var a:array[1..N] of integer;
+     i,k:integer;
+ BEGIN
+  for i:=1 to N do
+  begin
+   readln(a[i]);
+  end;
+  k:=0; //Обратите внимание: Боб обнулил счётчик - значит не все потеряно.
+  for i:=2 to 10 do 
+  begin         
+   if a[i]=5 then k:=k+1;
+  end;
+ END.
+</textarea>
+
+<br>
+<br>
+</td>
+        </tr>
+      </table>

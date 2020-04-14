@@ -1,0 +1,339 @@
+#index-rotator
+{
+	font-family: 'Caveat', 'Gabriola' ;
+	font-size: 30px;
+    font-weight: bold;
+}
+
+#code-frame
+{
+	
+	font-weight: bold;
+
+}
+#header-background
+{
+	background: #293249; 
+}
+
+#main-background
+{
+	background: #222;
+	
+
+}
+
+.logo
+{
+	padding-left: 15%;
+}
+
+A
+{
+	text-decoration:none; /* Подчеркивание ссылок */
+    color: #009f00; /* Цвет ссылок */
+}
+
+#ex
+{
+    color: #4169E1; /* Цвет ссылок задач */
+}
+
+a:hover
+{
+	color:#8B4513;
+	text-decoration:none;
+	
+
+}
+
+a:visited
+{
+    color: #A0522D; /* Цвет посещенных ссылок */
+}
+
+a:active
+{
+    color: #ffff00; /* Цвет активных ссылок */
+}
+
+body
+{
+	color: #b2b5ba;
+	font-size: 15px;
+	text-align: justify;
+	font-family: "Comic Sans MS";
+	background: #222; 
+
+}
+
+#header-text
+{
+    font-family: 'Caveat', 'Gabriola';
+	color: #DEB887;
+	font-weight: bold;
+	font-size: 25px;
+	text-align:center;
+    padding-left: 10%;
+	
+}
+
+table
+{
+border: 0px solid #373737 ; /* цвет боковых */
+border-collapse: collapse;
+}
+
+tr
+{
+	border-bottom: none; 
+}
+
+td 
+{
+	border-right:none; 
+	vertical-align: middle;
+	margin: none;
+	
+
+}
+tr td:first-child
+{
+	border-left: none;
+}
+
+tr td:last-child 
+{
+	border-right: none;
+}
+
+#size-slogan
+{
+	padding-left: 15%;
+	font-size: 100%;
+	font-family: 'Mali', cursive;
+}
+
+#text-all
+{
+	
+	font-size:15px;
+
+
+}
+
+#advertising
+{
+	content: "Здесь может быть Ваша реклама.";
+}
+
+#top-border
+{
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	font-size: 15px;
+
+}
+
+p
+{
+	text-indent: 40px;
+	padding-left: 20px;
+	margin-right: 20px;
+    text-align: justify;
+}
+
+ #author
+ {
+ 	font-family: 'Oregano', cursive;
+ 	font-size: 20px;
+ 	text-align: center;
+ }
+
+.logo 
+{
+	padding-left: 15%;
+}
+
+.text-area {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.text-area h1,
+h2,
+h3 {
+    
+}
+
+.benefits {
+    width: 100%;
+    
+}
+
+.benefits__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.benefits__header {
+    width: 100%;
+    
+    line-height: 1.3;
+    padding: 0 15px 60px;
+    color: #e2e2e2;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.benefits__element {
+    width: 30%;
+}
+
+.benefits__icon {
+    display: block;
+    width: 80px;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.benefits__element p {
+    color: #cdcdcd;
+    
+    line-height: 1.3;
+}
+
+.benefits__number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    opacity: 0;
+    padding-right: 40px;
+}
+
+.benefits__title {
+    font-size: 1.125rem;
+}
+
+.text-typing
+{
+    width: 55em;
+    color:green;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+@keyframes type{
+    from { width: 0; }
+}
+ 
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+
+a:hover
+{
+   color: #B5522D;
+}
+
+textarea {
+    width: 90%; 
+    height: 150px;
+    resize: none; /* Запрещаем изменять размер */
+    background: #222;
+    color:#FFF;
+    border:none;
+    margin-left:50px;
+    outline: none;
+    cursor: default;
+    background: #191919;
+    padding-left: 15px;
+    padding-top: 15px;
+    -webkit-box-shadow: 0px -2px 30px 0px rgba(57, 50, 50, 1);
+    -moz-box-shadow:    0px -2px 30px 0px rgba(57, 50, 50, 1);
+    box-shadow:         0px -2px 30px 0px rgba(57, 50, 50, 1);
+      -moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    -khtml-border-radius: 10px; /* KHTML */
+    border-radius: 10px; /* CSS3 */
+    /* Для плохих IE */
+    behavior: url(border-radius.htc); /* учим IE border-radius */
+
+} 
+
+textarea:focus, input:focus
+{
+    outline: none;   
+    cursor: default;
+    background: #191919;
+}
+
+
+
+#randomlist
+{
+    font-family: 'Caveat', 'Gabriola'; 
+    font-size: 30px;
+
+}
+
+hr
+{
+    
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+#mathtable tr td
+{
+    box-shadow: inset 0 0 3px;
+}
+
+#mathtable 
+{
+    padding-bottom: 10px;
+}
+
+h2
+{
+    font-weight: bold;
+    font-family: 'Caveat', 'Gabriola'; 
+    font-size: 30px;
+    text-align: center; 
+    color:#4169E1;
+}
+
+h3
+{
+    text-align: center;
+    font-family: 'Gabriola', 'Caveat'; 
+    font-size: 20px;
+    color:#4A76A8;
+}
+
+li
+{
+    padding-left: 10px;
+}
+
+h1
+{
+    text-align: center;
+   font-family: 'Caveat', 'Gabriola'; 
+    font-size: 50px;
+    color:#4169E1;
+}
+

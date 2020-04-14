@@ -1,0 +1,85 @@
+			<Table width = "100%" id = "main-background">	
+			<td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2.html"> Урок 2 (Вы здесь) </a> > <a href = "pascal_lesson_3.html"> Урок 3  </a> </td>																
+				<TR height = "20" width = "100%" align = "center" >
+					<TD>
+						<h1> Типы данных </h1>
+						<p> В прошлом уроке мы вводили и выводили данные, которые не были присуще к типам данных, однако в последнем примере Вы могли заметить строчку <BR> <Font color =#4169E1> "var name:string;" </font> - Это и есть принадлежность к типу. 
+						Объявляются типы сразу перед телом программы, конструкцией <Font color =#4169E1> var. </Font> </p>
+					</td>	
+				 <td> <img src = "img/l2.png" width = "200px" height = "250px"> </a> </td>	
+					
+				</TR>
+				<TR height = "30%">
+					<TD>
+						<p> Подразделяют несколько типов данных:
+							<ul type ="circle">
+
+							  <li> Числовой <ul type ="square">
+							  	<li> integer </li> 
+							  	<li> real </li> 
+							  </li> </ul>
+
+							  <li> Логический
+							    <ul type ="square">
+							  <li> Boolean 
+							  	<ul type ="disc">
+							  	<li> True </li>
+							  	<li> False </li>
+							  	</ul>
+							   </li> 
+							  	</ul>
+							  </li>
+							  	
+							  <li> Текстовый 
+							   	<ul type ="square">
+							  		<li> Char </li> 
+							  		<li> String </li> 
+							   </ul>
+							  </li>
+							</ul>
+						 </p>
+
+							<Table border = "0" width = "100%" height = "30%" >
+ 								<Tr>
+  									<Td>
+										 <h2>  Числовой тип </h2> 
+  										 <p> <Font color = '#4169E1'> integer </Font> - Целые числа (-10000, -5, 0, 12345 и т.д.) <BR> </p>
+  										 <p> <Font color = '#4169E1'> Real </Font> - Вещественные числа (0.12345, -5.5, 999.0 и т.д.) </p>
+  	  								</Td>
+  								</Tr>
+
+							</Table>																			
+					</TD>
+
+				</TR>
+
+				<TR>
+					<TD valign = "top">
+					<h2>  Текстовый тип </h2>
+  										 <p>  <Font color = '#4169E1'> String </Font> - Проще говоря, строка ("Hello world", "abracadabra455!@#%" и т.п.) </p>
+  										 <p> <Font color = '#4169E1'> Char </Font> - Символьный тип - Принимает значение одного символа ("!", "a","2") </p>
+							<p> Например, Считаем и выведем все описанные типы данных на экран: </p>
+							<Table border = "0" width = "100%" height = "30%">
+ 								<Tr>
+  									<Td>																																	
+  	 <textarea id = "code-frame" readonly style = "height:235px;"> 
+uses crt; //Подключаем модуль "crt", который создаст окно вывода на экран 
+var name:string; //Описываем переменную имя, Как текстовый тип (В частности, строковой) 
+var age:integer; //Создаем переменную count, которая будет принимать целые  числа. var можно только один раз в начале
+BEGIN 
+  writeln ('Введите имя');
+  Readln (name); 
+  writeln ('Введите возраст'); 
+  Readln (age);
+  write ('Меня зовут',name,'и мне',age);
+END. </textarea>
+  									</Td>
+  								</Tr>
+
+							</Table>	
+				<br>
+				<br>
+					</TD>
+				</TR>		
+
+			</Table>

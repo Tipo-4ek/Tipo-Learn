@@ -1,0 +1,114 @@
+	<Table border = "0" width = "100%" id = "main-background">			
+			<tr align = "100%"> 
+			<td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2.html"> Урок 2 </a> > <a href = "pascal_lesson_3.html"> Урок 3  </a> > <a href = "pascal_lesson_4.html"> Урок 4  </a> > <a href = "pascal_lesson_5.html"> Урок 5  </a> > <a href = "pascal_lesson_6.html"> Урок 6  </a> > <a href = "pascal_lesson_7.html"> Урок 7 (Вы здесь) > <a href = "pascal_lesson_8.html"> Урок 8 </a> </td>
+			</tr>														
+				<TR height = "20" width = "100%" align = "center" >
+					<TD>
+						<h1> Циклические алгоритмы. Обобщение. Примеры реализации </h1>
+						
+						
+					</td>	
+					<td> <img src = "img/l7.png" width = "200px" height = "250px"> </a> </td>
+					</tr>
+				
+
+				<tr>
+					<td>
+						<h2> Обобщение циклических алгоритмов </h2>
+						<p> Теперь Вы знаете 3 типа операторов типа </p>
+						<ul>
+								<li> Циклы со счетчиком (for) </li>
+								<li> Циклы с предусловием (while) </li>
+								<li> Циклы с постусловием (repeat) </li>
+						</ul>
+
+						<p> Теперь разберем конструкцкию каждого на примерах. </p>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2> Цикл for </h2>
+
+						<p> Ниже приведенный код выполняет создание двузначных чисел и находит количество и сумму делителей числа нацело на переменную цикла </p>
+						<br>
+						<textarea id = "code-frame" readonly style = "height:250px;">
+uses crt;
+var a,i,sum,k,kk: INTEGER;
+BEGIN
+  for a:=10 to 100 do
+  begin
+    k:=0;
+    for i:=2 to a div 2 do
+      IF a mod i = 0 then inc(k);
+    if k = 0   then begin inc(kk);inc(sum,i); write(A,' ');end;
+  end;
+  writeln('');
+  writeln('Кол-во делителей:',kk);
+  writeln('Сумма делителей:',sum);
+END.							
+						</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2> Цикл while </h2>
+						<p> А данный код считывает символ с клавиатуры в переменную 'a' и продолжает цикл до момента, пока 'a' не станет равным 0. Т.к. В теле программы всего один оператор (readln (a)), то begin и end можно не использовать </p>
+						<textarea id = "code-frame" readonly style = "height:230px;">
+uses crt;
+var a:char;
+
+BEGIN
+
+  while a <> '0' DO
+    begin
+      readln (a);
+    end;
+
+
+END.
+</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2> Цикл repeat </h2>
+
+						<p> <font color = "#4A76A8"> ЗАДАЧА: </font> Вводится последовательность из N целых чисел. Найти наибольшее из всех отрицательных чисел. </p>
+						<h3> Решение </h3>
+						<textarea id = "code-frame" readonly style = "height:450px;">
+var
+  N, i, a, maxNegNum: integer;
+  bln: boolean; // Логический тип данных
+
+begin
+  i := 0; // Счетчик цикла, левая граница выполнения цикла
+  N := 10; // Правая граница выполнения цикла
+  bln := false; 
+  writeln('Введите ', N, ' целых чисел:');
+
+  repeat
+    inc(i); // Увеличиваем i на одну единицу. Равносильно i:=i+1;
+    write(i, ') ');
+    readln(a); // Считали число
+    if (a < 0) then //Если число меньше ноля, то
+      if not bln then begin // Если bln = false, то
+        maxNegNum := a; // Максимальному отрицательному числу присваиваем значение переменной 'a'
+        bln := true // Отрицательное число найдено!
+      end
+      else // Иначе
+        if (a > maxNegNum) then maxNegNum := a 
+  until i = N; // Повторять, пока i не станет равным N
+  if not bln then writeln('Нет отрицательных чисел') // Если bln = false, то написать, что число не найдено.
+  else writeln('Ответ: ', maxNegNum); // Иначе вывести это число
+
+end.
+						</textarea>
+						<br>
+						<br>
+					</td>
+				</tr>
+
+
+				</table>
+

@@ -1,0 +1,95 @@
+												﻿	<Table border = "0" width = "100%" id = "main-background">			
+			<tr align = "100%"> 
+			<td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2_2.html"> Урок 2 (Вы здесь) </a> > <a href = "pascal_lesson_3_3.html"> Урок 3  </a> </td>
+			</tr>														
+				<TR height = "20" width = "100%" align = "center" >
+					<TD>
+						<h1> Типы данных </h1>
+						
+						
+					</td>	
+					<td> <img src = "img/l10.png" width = "200px" height = "250px"> </a> </td>
+					</tr>
+				<tr>
+					<td>
+						<h2> INTEGER</h2>
+						<p> <font color = "#4169E1"> ЗАДАЧА: </font>Посчитать сумму двух чисел введенных с клавиатуры.</p><br>
+						<textarea id = "code-frame" readonly style = "height:125px;">
+var x,y:integer;
+BEGIN
+    writeln('Введите два числа: ');
+    readln(x,y);
+    writeln('Сумма чисел = ',x+y);
+END.
+ </textarea>
+<br>
+<br>
+				</tr>
+					</td>
+
+				<tr>
+					<td>
+                        <h2> REAL</h2>
+						<p> <font color = "#4169E1"> ЗАДАЧА: </font>Ввести с клавиатуры 5 чисел, и вывести среднее арифметическое данных чисел.</p><br>
+						<textarea id = "code-frame" readonly style = "height:125px;">
+var x,y,z,w,t:real;
+BEGIN
+    writeln('Введите 5 чисел:');
+    readln(x,y,z,w,t);
+    writeln('Среднее арифметическое = ',(x+y+z+w+t)/5);
+END. </textarea>
+<br>
+<br>
+				</tr>
+					</td>
+				<tr>
+					<td>
+						<h2> BOOLEAN</h2>
+						<p> <font color = "#4169E1"> ЗАДАЧА: </font>Ввести 3 целых числа: a,b и c. Если a>b и c<10, выводит True, ложно False.</p><br>
+						<textarea id = "code-frame" readonly style = "height:150px;">
+var a,b,c:integer;
+        s:boolean;
+BEGIN
+    writeln('Введите 3 числа (целых): ');
+    readln(a,b,c); 
+    s:=(a>b) and (c<10);
+    writeln(s);
+END. </textarea>
+<br>
+<br>
+				</tr>
+					</td>
+				<tr>
+					<td>
+                        <h2> CHAR</h2>
+						<p> <font color = "#4169E1"> ЗАДАЧА: </font>Программа вывода кода символа </p>
+						<textarea id = "code-frame" readonly style = "height:130px;">
+uses crt;
+var i:char;
+BEGIN
+  readln(i);
+  writeln('Код символа - ',i,' = #',ord(i),' ') // Возвращает значение выражения перечисляемого типа.
+END. </textarea>
+				</tr>
+					</td>
+                 <tr>
+                    <td>
+                        <h2> STRING</h2>
+                        <p> <font color = "#4169E1"> ЗАДАЧА: </font>Ввести 3 целых числа: a,b и c. Если a>b и c<10, выводит True, ложно False.</p><br>
+                        <textarea id = "code-frame" readonly style = "height:150px;">
+var a,b,c:integer;
+        s:boolean;
+BEGIN
+    writeln('Введите 3 числа (целых): ');
+    readln(a,b,c); 
+    s:=(c<10) AND (a>b);
+    writeln(s);
+END. </textarea>
+<br>
+<br>
+                </tr>
+                    </td>
+
+			</table>
+<br>
+<br>

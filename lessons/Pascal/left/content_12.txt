@@ -1,0 +1,61 @@
+	<Table border = "0" width = "100%" id = "main-background" >			
+			<tr align = "100%"> 
+			<td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2.html"> Урок 2 </a> > <a href = "pascal_lesson_3.html"> Урок 3  </a> > <a href = "pascal_lesson_4.html"> Урок 4  </a> > <a href = "pascal_lesson_5.html"> Урок 5  </a> > <a href = "pascal_lesson_6.html"> Урок 6  </a> > <a href = "pascal_lesson_7.html"> Урок 7  > <a href = "pascal_lesson_8.html"> Урок 8 </a> > <a href = "pascal_lesson_9.html"> Урок 9 </a> > <a href = "pascal_lesson_10.html"> Урок 10 </a> > <a href = "pascal_lesson_11.html"> Урок 11 > <a href = "pascal_lesson_12.html"> Урок 12 (Вы здесь) </a> </td>
+			</tr>														
+				<TR height = "20" width = "100%" align = "center" >
+					<TD>
+						<h1 style = "color:#4169E1;"> Файлы. Работа с файлами </h1>
+						
+						
+					</td>	
+					<td> <img src = "img/l12.png" width = "200px" height = "250px"> </a> </td>
+					</tr>
+				
+
+				<tr>
+					<td>
+						<h2> Работа с файлами </h2>
+						<p> Паскаль может работать с файлами, открывать файлы, считывать и записывать в них некоторую информацию <br>
+							<h3> Описание текстовых файлов: </h3>
+							<textarea id = "code-frame" readonly>
+var
+   f1: file of char; //типизированный файл.
+   f2: file of integer; //типизированный файл.
+   f3: file; //нетипизированный файл.
+   f: text; //текстовый файл. </textarea>
+						</p>
+						<p> Для связи файла в коде программы c файлом в системе используют процедуру ASSIGN </p>
+						<li> Assign (f,'input.txt') <font color = "#4169E1"> // Связывает файл 'input.txt', находящийся в папке с программой с переменной 'f' (Вместо 'input.txt' можно писать полный путь к файлу, например, 'D://user/pabcwork/input.txt' </font> </li>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2> Открытие файла </h2>
+						<li> reset(f) <font color = "#4169E1"> // Открывает существующий файл f для чтения и ставит курсор в начало файла. </font>  </li>
+						<li> rewrite(f) <font color = "#4169E1"> // Создает файл для записи или, если он существует, стирает в файле все данные. </font>  </li>
+						<h2> Чтение из файла </h2>
+						<li> Seek (f,0) - Перемещает курсор в файле 'f' на '0' позицию (начало файла) </li>
+						<li> Read (f,'<переменная для записи>') - Считывает из строки. </li>
+						<li> Readln (f,'<переменная для записи>') - Считывает из строки и переходит на следующую строку в файле. </li>
+
+						<p style = "color:#4169E1";> Чтение осуществляется с той позиции, где стоит курсор  </p>
+						<h2> Запись в файл </h2>
+						<li> write (f,a) - Записывает в файл 'f' значение переменной 'a', с той позиции, где стоит курсор</li>
+						<li> write (f,a) - Записывает в файл 'f' значение переменной 'a', с той позиции, где стоит курсор, затем переходит на следующую строку.</li>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2> Процедуры работы с файлом </h2>
+						<li> <font color = "#4169E1"> Erase (f) </font> - Стирает файл 'f' из системы. </li>
+						<li> <font color = "#4169E1"> Eoln (f) </font> - Возвращает true или false, в зависимости от того, стоит курсор в конце строки или нет (End Of Line). </li>
+						<li> <font color = "#4169E1"> Eof (f) </font> - Возвращает true или false, в зависимости от того, стоит курсор в конце файла или нет (End Of File). </li>
+						<li> <font color = "#4169E1"> FilePos(f) </font> - Возвращает текущую позицию курсора в файле 'f'.</li>
+						<li> <font color = "#4169E1"> FileSize(f) </font> - Возвращает текущий размер файла 'f' </li>
+						<li> <font color = "#4169E1"> rename(f,'f1') </font> - Переименовывает файл 'f' в файл 'f1' </li>
+						<li> <font color = "#4169E1"> Close (f) </font> - Закрывает файл 'f' в программе и очищает память. <font color = "#4169E1"> // Закрывать файл обязательно после работы с ним. </font> </li>
+							<br>
+							<br>
+					</td>
+				</tr>
+			</table>

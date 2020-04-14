@@ -1,0 +1,44 @@
+table
+{
+border: 1px solid #222; /* цвет можно указать любой */
+border-collapse: collapse;
+}
+
+#table
+{
+border: 1px solid #373737; /* цвет можно указать любой */
+border-collapse: collapse;
+}
+
+tr
+{
+	border-bottom: none; 
+}
+
+
+tr td:first-child
+{
+	border-left: none;
+}
+
+tr td:last-child 
+{
+	border-right: none;
+}
+
+th
+{
+    font-family: 'Caveat', 'Gabriola' ;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+td 
+{
+	border-right:none; 
+	vertical-align: top;
+	margin: none;
+	border-right: 0px solid #808080; /* цвет можно указать любой */;
+
+}

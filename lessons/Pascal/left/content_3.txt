@@ -1,0 +1,121 @@
+			<Table border = "0" width = "100%" id = "main-background" >	
+			<tr align = "100%"> 
+			<td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2.html"> Урок 2 </a> > <a href = "pascal_lesson_3.html"> Урок 3 (Вы здесь) </a> > <a href = "pascal_lesson_4.html"> Урок 4 </a> </td>
+			</tr>
+
+				<TR height = "20" width = "100%" align = "center" >
+					<TD>
+						<h1> Функция <Font color ="#4169E1">Random() </Font> и поразрядное вычисление </h1>
+						
+						<br>
+					
+						<td> <img src = "img/l3.png" width = "200px" height = "250px"> </a> </td>
+					
+				</TR>
+				<TR height = "30%">
+					<TD>
+					
+
+							<Table border = "0" width = "100%" height = "30%" >
+ 								<Tr>
+  									<Td>
+										 <h2 align = "center"> Функция <Font color =#4169E1>Random() </Font> </Font> </h2> 
+  										 <p> <font color="#4169E1"> Random</font><font color="#4169E1">(n)</font> возвращает нам случаное число от нуля до <font color="#4169E1">n-1</font>, к примеру: <BR> </p>
+<Table border = "0" width = "100%" height = "30%">
+ 								<Tr>
+  									<Td>																																	
+							<textarea id = "code-frame" readonly style="height:140px"  >
+ uses crt;  //Подключаем модуль "crt", который создаст окно вывода на экран
+ var a:integer;
+ BEGIN
+   a:=random(10); // Выбирает случайное от 0 до 10, не включая 10
+   writeln (a);
+ END. </textarea>
+<TD style = "border-left:1px solid #FFF;"> 
+
+            <a href="code_files/pascal/lesson_3_code_1.pas" download = "" id = "code_file"> <p style = ""> Программа </p> <img src = "code_files/pascalico.jpg" width = "32" height ="32" style = "padding-left:90px;">
+
+          </TD>
+
+
+						
+  										
+  	  								</Td>
+  								</Tr>
+
+							</Table>																			
+					</TD>
+
+				</TR>
+
+			</Table>
+<TR height = "30%">
+					<TD>
+					
+
+							<Table border = "0" width = "100%" height = "30%" >
+ 								<Tr>
+  									<Td>
+										 <h2 align = "center"> Поразрядное вычисление </Font> </Font> </h2> 
+  										 <p> Поразрядное вычисление помогает нам получить из числа единицы сотни десятки и пр. Для этого используються две команды: mod и div.
+  	  									 <p> Mod - вычисляет остаток от целочисленного деления (Например: 17 mod 3 будет равно 2).
+										 <p> Div- делит число нацело (без остатка).</p>
+										 <p> Для того чтобы получить, например, из трехзначное числа единицы, десятки, сотни, то (Берем число 321):
+										 <p> 321 mod 10 равно <font color=#4169E1>1</font>.
+										 <p> 321 div 10 mod 10 равно <font color=#4169E1>2</font>.
+										 <p> 321 div 100 равно <font color=#4169E1>3</font>.</p>
+										 <p> К примеру:</p>
+<Table border = "0" width = "100%" height = "30%">
+ 								<Tr>
+  									<Td>																																	
+  	  <textarea id = "code-frame" readonly  >
+ uses crt; //Подключаем модуль "crt", который создаст окно вывода на экран
+ var a,ed,des,sot:integer;
+ BEGIN
+   readln(a);
+   ed:=a mod 10; // Нашли единицы.
+   des:=a div 10 mod 10; // Нашли десятки.
+   sot:=a div 100; // Нашли сотни.
+ END. </textarea>
+
+<p>Также с помощью команд  mod и div можно перевернуть число, еще раз берем трехзначное число:</p>
+<Table border = "0" width = "100%" height = "30%">
+ 								<Tr>
+  									<Td>																																	
+  	  	<textarea id = "code-frame" readonly style="height:250px;">
+ uses crt; 
+ var a,ed,des,sot,ed2,des2,per:integer;
+ BEGIN 
+   readln(a);
+   ed:=a mod 10; // Нашли единицы.
+   des:=a div 10 mod 10; // Нашли десятки.
+   sot:=a div 100; // Нашли сотни.
+   sot2:=ed*100;
+   des2:=des*10;
+   per:=sot2+des2+sot; // Получили перевернутое число.
+ END. </textarea>
+ <br>
+ <br>
+<TD style = "border-left:1px solid #FFF;"> 
+
+            <a href="code_files/pascal/lesson_3_code_3.pas" download = "code" id = "code_file"> <p style = ""> Программа </p> <img src = "code_files/pascalico.jpg" width = "32" height ="32" style = "padding-left:90px;">
+
+          </TD>
+
+						
+  										
+  	  								</Td>
+  								</Tr>
+
+							</Table>	
+</Td>
+						
+  								</Tr>
+
+							</Table>
+
+		</Table>
+  	  								</Td>
+  								</Tr>
+
+							</Table>	

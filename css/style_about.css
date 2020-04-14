@@ -1,0 +1,225 @@
+#index-rotator
+{
+	font-family: 'Caveat', cursive;
+	font-size: 30px;
+}
+
+#code-frame
+{
+	
+	font-weight: bold;
+
+}
+#header-background
+{
+	background: #293249; 
+}
+
+#main-background
+{
+	background: #fff;
+	
+
+}
+
+.logo
+{
+	padding-left: 15%;
+}
+
+A
+{
+	text-decoration:none; /* Подчеркивание ссылок */
+    color: #009f00; /* Цвет ссылок */
+}
+
+#ex
+{
+    color: #4169E1; /* Цвет ссылок задач */
+}
+
+
+
+body
+{
+	color: #b2b5ba;
+	font-size: 15px;
+	
+	font-family: 'Mali', cursive;
+	background: #373737; 
+
+}
+
+#header-text
+{
+	color: #DEB887;
+	font-weight: bold;
+	font-size: 20px;
+	text-align:center;
+	margin-top:3%;
+}
+
+table
+{
+border: 0px solid #373737 ; /* цвет можно указать любой */
+border-collapse: collapse;
+}
+
+tr
+{
+	border-bottom: none; 
+}
+
+td 
+{
+	border-right:none; 
+	vertical-align: middle;
+	margin: none;
+	
+
+}
+tr td:first-child
+{
+	border-left: none;
+}
+
+tr td:last-child 
+{
+	border-right: none;
+}
+
+#size-slogan
+{
+	padding-left: 15%;
+	font-size: 100%;
+	font-family: 'Mali', cursive;
+}
+
+#text-all
+{
+	
+	font-size:15px;
+
+
+}
+
+#advertising
+{
+	content: "Здесь может быть Ваша реклама.";
+}
+
+#top-border
+{
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	font-size: 15px;
+
+}
+
+p
+{
+	text-indent: 40px;
+	padding-left: 20px;
+	margin-right: 20px;
+    
+}
+
+ #author
+ {
+ 	font-family: 'Oregano', cursive;
+ 	font-size: 20px;
+ 	text-align: center;
+ }
+
+.logo 
+{
+	padding-left: 15%;
+}
+
+.text-area {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.text-area h1,
+h2,
+h3 {
+    
+}
+
+.benefits {
+    width: 100%;
+    
+}
+
+.benefits__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.benefits__header {
+    width: 100%;
+    
+    line-height: 1.3;
+    padding: 0 15px 60px;
+    color: #000;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.benefits__element {
+    width: 30%;
+}
+
+.benefits__icon {
+    display: block;
+    width: 80px;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.benefits__element p {
+    color: #000;
+    
+    line-height: 1.3;
+}
+
+.benefits__number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    opacity: 0;
+    padding-right: 40px;
+}
+
+.benefits__title {
+    font-size: 1.125rem;
+}
+
+.text-typing
+{
+    width: 55em;
+    color:green;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+@keyframes type{
+    from { width: 0; }
+}
+ 
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+

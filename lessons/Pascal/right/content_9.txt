@@ -1,0 +1,93 @@
+	﻿	<Table border = "0" width = "100%" id = "main-background" >			
+			<tr align = "100%"> 
+			<td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2_2.html"> Урок 2 </a> > <a href = "pascal_lesson_3_3.html"> Урок 3  </a> > <a href = "pascal_lesson_4_4.html"> Урок 4  </a> > <a href = "pascal_lesson_5_5.html"> Урок 5  </a> > <a href = "pascal_lesson_6_6.html"> Урок 6  </a> > <a href = "pascal_lesson_7_7.html"> Урок 7  > <a href = "pascal_lesson_8_8.html"> Урок 8 </a> > <a href = "pascal_lesson_9_9.html"> Урок 9 (Вы здесь) </a> > <a href = "pascal_lesson_10_10.html"> Урок 10 </a> </td>
+			</tr>														
+				<TR height = "20" width = "100%" align = "center" >
+					<TD>
+						<h1 style = "color:#4169E1"> Двумерные массивы. Формирование значений элементов массива </h1>
+						
+						
+					</td>	
+					<td> <img src = "img/l9.png" width = "150" height = "200"> </a> </td>
+					</tr>
+				
+
+				<tr>
+					<td>
+						<p> В прошлом уроке мы научились обратавывать одномерные массивы циклом FOR, но как же быть с двумерными? 
+							Двумерный массив - это массив, элементами которого являются одномерные массивы, соответственно для их обработки понадобится два цикла FOR.
+						</p>
+						<h3> Заполнение двумерных массивов </h3>
+<textarea id = "code-frame" readonly style = "height:250px;">
+uses crt;
+const N=10; M=10;
+var a:array[1..N, 1..M] of integer;
+    i,j:integer;
+BEGIN
+ for i:=1 to N do
+ begin
+	for j:=1 to M do
+	begin
+		a[i, j]:=Random(10);
+	end;
+ end;
+END.
+</textarea>
+					</td>
+					</tr>
+					<tr>
+					<td>
+						<h3> Вывод двумерного массива </h3>
+						<p> С помощью модуля <font color = "#4169E1"> CRT </font> можно удобно выводить двумерный массив в виде матрицы </p>
+<textarea id = "code-frame" readonly style = "height:165px;">
+ for i:=1 to N do
+ begin
+	for j:=1 to M do
+	begin
+		write(a[i, j]:2);
+	end;
+	writeln; // Делаем перевод строки, чтобы элементы следующего одномерного массива выводились в другую строку.
+ end;
+ </textarea>
+					</td>
+					</tr>
+					<tr>
+					<td>
+						<h3> Сумма элементов массива </h3>
+<textarea id = "code-frame" readonly style = "height:165px;">
+ s:=0;
+ for i:=1 to N do
+ begin
+	for j:=1 to M do
+	begin
+		s:=s+a[i, j];
+	end;
+ end;
+</textarea>
+<p> Как мы видим, нахождение суммы элементов двумерного массива ничем не отличается от того же действия с одномерным массивом,
+	кроме добавления еще одного цикла <font color = "#4169E1"> FOR. </font>
+</p>
+<p> А что если требуется найти сумму для каждой строки двумерного массива? 
+	Для этого нам потребуется обнулять переменную перед обработкой каждого одномерного массива. Вот пример:
+</p>
+<textarea id = "code-frame" readonly style = "height:165px;">
+ for i:=1 to N do
+ begin
+	s:=0;
+	for j:=1 to M do
+	begin
+		s:=s+a[i, j];
+	end;
+	writeln(s);
+ end;
+</textarea>
+<p> Также, вместо вывода переменной, можно записать ее значение в массив, 
+	создав таким образом массив, содержащий значения сумм каждой строки друмерного массива, либо обработать ее своим способом.
+</p>
+<br>
+<br>
+					</td>
+				</tr>
+
+
+			</table>

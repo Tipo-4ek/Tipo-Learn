@@ -1,0 +1,186 @@
+              <Table width = "100%" id = "main-background"> 
+      <td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1_1.html"> урок 1 </a> > <a href = "pascal_lesson_2_2.html"> урок 2 </a> > <a href = "pascal_lesson_3_3.html"> урок 3  </a> > <a href = "pascal_lesson_4_4.html"> урок 4  </a> > <a href = "pascal_lesson_5_5.html"> урок 5 </a> > <a href = "pascal_lesson_6_6.html"> урок 6 (Вы здесь) </a> > <a href = "pascal_lesson_7_7.html"> урок 7 </a> </td>
+        <TR height = "20" width = "100%" align = "center" >
+          <TD>
+            <h1> Циклические алгоритмы. Циклы for, while, repeat </h1>
+            
+          </td> 
+         <td> <img src = "img/l6.png" width = "150" height = "130"> </a> </td>  
+          
+        </TR>
+        <TR height = "30%">
+          <TD>
+            <h2> Цикл со счетчиком for </h2>
+
+            <p> <font color = "#4A76A8"> ЗАДАЧА: </font> Создать случайное двузначное число. Найти количество его делителей и вывести их. Найти среднее арифметическое делителей числа. Является ли число правильным? </p>
+
+            <h3> Описание типов данных и создание двузначного числа </h3>
+
+            <textarea id = "code-frame" readonly style = "height:200px;">
+uses crt;
+var a,i,k,sum:INTEGER;
+    sr:REAL;
+
+BEGIN
+
+a:=10+RANDOM (90);
+writeln ('Загаданное число=',a);
+k:=0;
+sum:=0;
+write (' Делители числа ',a,': ');  </textarea>
+
+            <h3> Нахождение количества и суммы  делителей. </h3>
+            <textarea id = "code-frame" readonly style = "height:150px;">
+FOR i:=1 TO a DO
+  begin
+    IF a mod i=0 THEN begin
+                        write (i,' ');  // Выводим делитель
+                        INC (k); // Равносильно 'k:=k+1'. Считаем количество
+                        sum:=sum+i; // Считаем сумму. Равносильно 'INC (sum)'
+                      end;
+  end;  </textarea>
+              <h3> Выводим ответ </h3>
+
+            <textarea id = "code-frame" readonly style = "height:160px;">
+writeln;
+writeln ('Количество=',k);
+sr:=sum/k;
+writeln ('Среднее арифметическое: ',sr:10:2);
+IF k=2 THEN writeln ('Число ',a,' простое')
+       ElSE writeln ('Число ',a,' не является простым');
+
+END.
+            </textarea>
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2> Цикл с предусловием while </h2>
+              <p> <font color = "#4A76A8"> ЗАДАЧА: </font> Создайте случайное трехзначное число. Выведите и посчитайте количество чисел, меньше чем заданное, которые кратны 3, но не кратны 4 </p>
+
+              <h3> Описание типов данных и создание числа </h3> 
+
+            <textarea id = "code-frame" readonly style = "height:160px;">
+uses crt;
+var x,k,i:INTEGER;
+
+BEGIN
+
+  x:=100+RANDOM (900);
+  writeln ('Задуманное число=',x);
+  i:=1;           
+            </textarea>
+
+            <h3> Создание цикла и условия проверки </h3>
+
+            <textarea id = "code-frame" readonly style = "height:250px;">
+  WHILE i<=x DO
+    begin
+    IF (i mod 4<>0) AND (i mod 3=0) THEN // Проверяем число. Если НЕ делится на 4 и делится на 3, то
+       begin
+       write (' ',i); // Выводит на экран число и пробел
+       INC (k); // Равносильно 'k:=k+1'
+       end;
+    INC (i);
+    end;
+    
+  writeln;
+  writeln ('Количество подходящих = ',k);
+
+END.
+            </textarea>
+
+
+
+
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <h2> Цикл с постусловием repeat </h2>
+
+            <p> <font color = "#4A76A8"> ЗАДАЧА: </font> Даны 4 числа (x1 (начальная координата x), x2 (конечная координата x), y1 (начальная координата y),y2 (конечная координата y)). Построить рамку циклом repeat </p>
+
+            <textarea id = "code-frame" readonly style = "height:250px;">
+uses crt;
+var x1,x2,y1,y2,x,y,cy,cx,ct,cf:INTEGER;
+
+
+BEGIN
+
+  write ('Введите x1 '); readln (x1);
+  write ('Введите x2 '); readln (x2);
+  write ('Введите y1 '); readln (y1);
+  write ('Введите y2 '); readln (y2);
+
+  clrscr; // Процедура очистки экрана (Работает при включенном модуле 'crt')
+
+  ct:=0;
+  cf:=4; </textarea>
+
+            <h3> Заглушка </h3>
+
+            <textarea id = "code-frame" readonly style = "height:480px;">
+  IF x1>x2 THEN
+    begin
+      x:=x1;
+      x1:=x2;
+      x2:=x;
+      cx:=cf;
+    end;
+
+  IF y1>y2 THEN
+      begin
+        y:=y1;
+        y1:=y2;
+        y2:=y;
+        cy:=cf;
+      end;
+
+  IF x1>80 THEN  x1:=80
+  ELSE IF x1 < 1 THEN x1:=1;
+
+  IF x2>80 THEN  x2:=80
+  ELSE IF x2 < 1 THEN x2:=1;
+
+  IF y1>25 THEN  y1:=25
+  ELSE IF y1 < 1 THEN y1:=1;
+
+  IF y2>25 THEN  y2:=25
+  ELSE IF y2 < 1 THEN y2:=1;
+
+  IF (x1 < 1) OR (x1>80) OR (x2 < 1) Or (x2>80) THEN cx:=cf;
+  IF (y1 < 1) OR (y1>25) OR (y2 < 1) Or (y2>25) THEN cy:=cf;    </textarea>
+
+              <h3> Цикл вывода рамки на экран </h3>
+
+              <textarea id = "code-frame" readonly style = "height:315px;">
+  REPEAT
+      gotoxy (x,y1);
+      write ('*');
+      gotoxy (x,y2);
+      write ('*');
+      x:=x+1;
+  UNTIL (x2 < x);
+    
+  y:=y1;
+  textcolor (cy);
+  REPEAT
+     gotoxy (x1,y);
+     write ('*');
+     gotoxy (x2,y);
+     write ('*');
+     y:=y+1;
+  UNTIL (y2 < y)
+END. </textarea>
+        <br>
+        <br>
+
+          </td>
+
+        </tr>
+
+      </table>

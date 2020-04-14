@@ -1,0 +1,95 @@
+                      ﻿ <Table border = "0" width = "100%" id = "main-background">      
+      <tr align = "100%"> 
+      <td style = "vertical-align:top; padding-left:20px;"> <a href = "pascal.html"> <img src = "img/home.png" width = "16" height = "16"> </a> >  <a href = "pascal_lesson_1_1.html"> Урок 1 </a> > <a href = "pascal_lesson_2_2.html"> Урок 2 </a> > <a href = "pascal_lesson_3_3.html"> Урок 3  </a> > <a href = "pascal_lesson_4_4.html"> Урок 4  </a> > <a href = "pascal_lesson_5_5.html"> Урок 5  </a> > <a href = "pascal_lesson_6_6.html"> Урок 6  </a> > <a href = "pascal_lesson_7_7.html"> Урок 7 (Вы здесь) > <a href = "pascal_lesson_8_8.html"> Урок 8 </a> </td>
+      </tr>                           
+        <TR height = "20" width = "100%" align = "center" >
+          <TD>
+            <h1> Циклические алгоритмы. Обобщение. Примеры реализации </h1>
+            
+            
+          </td> 
+          <td> <img src = "img/l7.png" width = "200px" height = "250px"> </a> </td>
+          </tr>
+
+        <tr>
+          <td>
+            <h2> Цикл for </h2>
+
+            <p> <font color = "#4169E1" >ЗАДАЧА: </font> Вывести на экран ряд чисел Фибоначчи, который состоит из n элементов. (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …, каждое последующее число равно сумме двух предыдущих чисел.) </p>
+
+            <textarea id = "code-frame" readonly style = "height:315px;">
+uses crt;
+var a,b,c,i,n: integer;
+BEGIN
+    write('n = ');
+    readln(n);
+    a := 0;
+    write(a,' ');
+    b := 1;
+    write(b,' ');
+    for i:=3 to n do begin
+        write(a+b,' ');
+        c := b;
+        b := a + b;
+        a := c
+    end;
+readln
+END.          </textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2> Цикл while </h2>
+            <p> <font color = "#4169E1" >ЗАДАЧА: </font> Найти число под заданным номером в ряду чисел, состоящих из цифр 0 и 5. (Дана последовательность чисел, состоящих только из цифр 0 и 5, в порядке возрастания: 0 5 50 55 500 505 5000 5005 5050 и так далее. Найти k-ое по порядку в этой последовательности число.) </p>
+            <textarea id = "code-frame" readonly style = "height:375px;">
+uses crt;
+var k,i,n,m: integer;
+
+BEGIN
+    readln(k);
+    n := 0;
+    i := 1;
+    while i < k do begin
+        n := n + 5;
+        m := n;
+        while m > 0 do begin
+            if (m mod 10 <> 5) and (m mod 10 <> 0) then break;
+            m := m div 10;
+        end;
+        if m = 0 then i := i + 1;
+    end;
+ 
+    writeln(n);
+
+END.</textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2> Цикл repeat </h2>
+
+            <p> <font color = "#4169E1" >ЗАДАЧА: </font> Найти одинаковые цифры двух чисел. (Даны два числа. Определить цифры, которые находятся в записи как первого, так и второго числа.) </p>
+
+            <h3> Решение: </h3>
+            <textarea id = "code-frame" readonly style = "height:240px;">
+var x,i:integer;
+    a:real;
+BEGIN
+  i:=1;
+  writeln('Введите число: ');
+  readln(x);
+  repeat
+    i:=i+1;
+    a:=x/i;
+  until (x mod i)=0;
+    if (a=x) then writeln('Да!')
+             else writeln('Нет');
+    readln;
+END.</textarea>
+<br>
+<br>
+          </td>
+        </tr>
+
+
+        </table>
